@@ -7,9 +7,12 @@ EAD documentation](http://www.loc.gov/ead/tglib/elements/author.html).
 
 * Auto-link to documentation for tags mentioned in "May contain:" and "May occur within:" sections
 
+* Best Effort for syntax highlighting in examples
+
+* Improved Styling
+
 #### Upcoming Features
 
-* Sane and modern example code formatting.
 * Ability to turn off extension from tool bar.
 
 #### Sunsetting Features
