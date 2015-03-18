@@ -35,7 +35,7 @@ if (mayContainHeader.length > 0) {
 
   var linksToTerm = [];
   $.each(childTerms, function(index, childTerm){
-    linksToTerm.push("<code><a href='http://loc.gov/ead/tglib/elements/"+$.trim(childTerm)+".html'>"+ childTerm +"</a></code> ");
+    linksToTerm.push("<a href='http://loc.gov/ead/tglib/elements/"+$.trim(childTerm)+".html'>"+ childTerm +"</a> ");
   });
 
   mayContainParagraph.html("").append(linksToTerm)
@@ -48,7 +48,7 @@ if (mayOccurWithinHeader.length > 0) {
 
   var linksToTerm = [];
   $.each(childTerms, function(index, childTerm){
-    linksToTerm.push("<a href='http://loc.gov/ead/tglib/elements/"+$.trim(childTerm)+".html'>"+ childTerm +"</a>");
+    linksToTerm.push("<a href='http://loc.gov/ead/tglib/elements/"+$.trim(childTerm)+".html'>"+ childTerm +"</a> ");
   });
 
   mayOccurWithinParagraph.html("").append(linksToTerm);
