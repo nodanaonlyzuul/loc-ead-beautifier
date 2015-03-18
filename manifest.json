@@ -4,10 +4,16 @@
   "version": "0.0.1",
   "description": "Beautify and modernize the LOC's EAD Guide",
   "background": "background.html",
+  "icons": {
+    "16":   "images/icon16.png",
+    "48":   "images/icon48.png",
+    "128":  "images/icon128.png"
+  },
   "browser_action": {
     "name": "Manipulate DOM",
-    "icons": ["icon.png"],
-    "default_icon": "icon.png"
+    "icons": ["images/icon.png"],
+    "default_icon": "images/icon.png",
+    "default_title": "LOC EAD Beautifier"
   },
   "content_scripts": [ {
     "js": [ "jquery-2.1.3.min.js", "background.js" ],
