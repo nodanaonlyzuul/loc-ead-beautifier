@@ -17,7 +17,7 @@
 var mayContainHeader = $("h3:contains('May contain:')").first();
 var mayOccurWithinHeader = $("h3:contains('May occur within:')").first();
 var exampleHeader = $("h3:contains('Example:'), h3:contains('Examples:')").first();
-
+var attributesTable = $("h3:contains('Attributes:')").siblings('table');
 
 // Remove noise
 $('h2:contains(EAD Elements)').remove();
@@ -25,9 +25,8 @@ $('h3:contains(Description:)').remove();
 $('h1').remove();
 $('h2').changeElementType("h1");
 
-
 // Restyle
-$('h3').css("background", "none").css("font-size", "1.26em").css("color", "#333");
+$('h3').css("background", "none").css("font-size", "1.25em").css("color", "#333");
 
 if (mayContainHeader.length > 0) {
   var mayContainParagraph = mayContainHeader.next('p');
@@ -66,4 +65,8 @@ if (exampleHeader.length > 0) {
     codeElement.html(exampleText);
     hljs.highlightBlock(codeElement[0]);
   }
+}
+
+if (attributesTable.length > 0) {
+  attributesTable.attr("width", "98%").attr("border", "1")
 }
