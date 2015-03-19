@@ -14,6 +14,7 @@ EAD documentation](http://www.loc.gov/ead/tglib/elements/author.html).
 #### Upcoming Features
 
 * Ability to turn off extension from tool bar.
+* Do restyling injected CSS, not JS.
 
 #### Sunsetting Features
 
