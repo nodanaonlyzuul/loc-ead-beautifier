@@ -19,3 +19,10 @@ EAD documentation](http://www.loc.gov/ead/tglib/elements/author.html).
 #### Sunsetting Features
 
 * If loc.gov gets hip and implements some of a feature. It will be removed from this extension.
+
+##### Release Notes
+
+###### 0.0.3
+  
+* [Do not link to "EMPTY"](https://github.com/nodanaonlyzuul/loc-ead-beautifier/issues/2)
+* [Do not link to "#PCDATA"](https://github.com/nodanaonlyzuul/loc-ead-beautifier/issues/1)
