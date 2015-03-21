@@ -1,7 +1,7 @@
 {
   "name": "LOC EAD Beautifier",
   "manifest_version": 2,
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Beautify and modernize the LOC's EAD Guide",
   "background": "background.html",
   "icons": {

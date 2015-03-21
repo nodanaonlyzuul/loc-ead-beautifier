@@ -23,6 +23,10 @@ EAD documentation](http://www.loc.gov/ead/tglib/elements/author.html).
 ##### Release Notes
 
 ###### 0.0.3
-  
+
 * [Do not link to "EMPTY"](https://github.com/nodanaonlyzuul/loc-ead-beautifier/issues/2)
 * [Do not link to "#PCDATA"](https://github.com/nodanaonlyzuul/loc-ead-beautifier/issues/1)
+
+###### 0.0.4
+
+* Make JavaScript less copy & paste-arific
