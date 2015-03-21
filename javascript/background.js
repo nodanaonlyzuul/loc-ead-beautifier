@@ -1,5 +1,6 @@
 var mayContainHeader      = $("h3:contains('May contain:')").first();
 var mayOccurWithinHeader  = $("h3:contains('May occur within:')").first();
+var siblingContainers     = $.merge(mayContainHeader.next('p'), mayOccurWithinHeader.next('p'));
 var exampleHeader         = $("h3:contains('Example:'), h3:contains('Examples:')").first();
 var attributesTable       = $("h3:contains('Attributes:')").siblings('table');
 var nonLinkables          = ["#PCDATA", "EMPTY"];
@@ -14,12 +15,12 @@ $('h2').changeElementType("h1");
 $('h3').css("background", "none").css("font-size", "1.25em").css("color", "#333");
 
 
-// TODO: These are two blocks are exactly the same.
-if (mayContainHeader.length > 0) {
-  var mayContainParagraph = mayContainHeader.next('p');
-  var childTerms = mayContainParagraph.text().split(',');
-
+// Make element names linkable
+siblingContainers.each(function(i, paragraph){
+  var paragraph = $(paragraph);
+  var childTerms = paragraph.text().split(',');
   var linksToTerm = [];
+
   $.each(childTerms, function(index, childTerm) {
     if (nonLinkables.indexOf(childTerm) == -1 ) {
       linksToTerm.push("<a href='http://loc.gov/ead/tglib/elements/"+$.trim(childTerm)+".html'>"+childTerm+"</a>");
@@ -28,26 +29,10 @@ if (mayContainHeader.length > 0) {
     }
   });
 
-  mayContainParagraph.html("").append(linksToTerm.join(" "));
-}
+  paragraph.html("").append(linksToTerm.join(" "));
+});
 
-
-if (mayOccurWithinHeader.length > 0) {
-  var mayOccurWithinParagraph = mayOccurWithinHeader.next('p');
-  var childTerms = mayOccurWithinParagraph.text().split(',');
-
-  var linksToTerm = [];
-  $.each(childTerms, function(index, childTerm){
-    if (nonLinkables.indexOf(childTerm) == -1 ) {
-      linksToTerm.push("<a href='http://loc.gov/ead/tglib/elements/"+$.trim(childTerm)+".html'>"+ childTerm +"</a>");
-    } else {
-      linksToTerm.push(childTerm)
-    }
-  });
-
-  mayOccurWithinParagraph.html("").append(linksToTerm.join(" "));
-}
-
+// Code highlighting of examples
 if (exampleHeader.length > 0) {
   var usageBlock = exampleHeader.siblings("pre");
   if (usageBlock.length > 0) {
