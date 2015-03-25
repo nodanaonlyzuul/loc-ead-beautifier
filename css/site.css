@@ -1,0 +1,14 @@
+body {
+	background-color:#bbb;
+  font-family: Futura,"Trebuchet MS",Arial,sans-serif
+}
+.hero-heading {
+  color: #ebe43f;
+}
+
+.hero-unit {
+  background-image:url('/images/explode.gif');
+  background-size:cover;
+  height:300px;
+  background-position-y: -130px;
+}
